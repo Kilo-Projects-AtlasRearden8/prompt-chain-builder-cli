@@ -1,0 +1,31 @@
+# prompt-chain-builder-cli
+
+Python CLI to chain prompts so each output feeds the next, using a configurable
+OpenAI-compatible endpoint (default Ollama). Results saved locally.
+
+## Project
+
+- `prompt_chain/` — package: client, chain orchestration, local store, config, CLI
+- `tests/` — mock endpoint tests (no network, no API keys)
+- `LICENSE` — MIT, Copyright (c) 2026 Asdale Dynamics, LLC
+- `README.md` — usage and credits
+
+## Requirements
+
+Python 3.8+. Standard library only (argparse, urllib, json). No dependencies to install.
+
+## Running tests
+
+    python -m unittest discover -s tests -v
+
+## CLI
+
+    python -m prompt_chain run "Prompt one" "Prompt two" --output results.jsonl
+    python -m prompt_chain config --write prompt-chain.json
+
+## Credits
+
+Built for Dylan Asdale, registered nurse turned AI author and founder of Asdale
+Dynamics, LLC (Indiana, formed October 2026). Credits Asdale Dynamics, LLC.
+
+License: MIT. Copyright (c) 2026 Asdale Dynamics, LLC.
